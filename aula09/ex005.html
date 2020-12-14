@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: rgb(54, 54, 54);
+        }
+        div.msg {
+            font: 15pt Arial normal;
+            box-shadow: 2px 2px 10px  rgb(0, 0, 0);
+            background-color: green;
+            line-height: 200px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="msg">Clique em Mim</div>
+    <script>
+       var p1 = window.document.getElementsByTagName('div')[0]
+       p1.style.color = 'blue'
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(54, 54, 54);
+            font: 20pt normal Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var n1 = 5
+        n1.toLocaleString('pt-BR', {style: 'currency', currency:'CAD'})
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Olá ${nome}. Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toLocaleUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLocaleLowerCase()}`)
+    </script>
+</body>
+</html>
