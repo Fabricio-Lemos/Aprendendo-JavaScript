@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistemas de multas</h1>
+    <h2>Velocidade do Carro: </h2><input type="number" id="vel" name="vel">
+    <input type="button" value="Verificar" onclick="verifique()">
+
+    <div id="res">verificando...</div>
+    <script>
+        function verifique(){
+            var txtv = document.getElementById('vel')
+            var numv = Number(txtv.value)
+            var res = document.getElementById('res')
+                if(numv > 60){
+                    res.innerHTML = `Sua velocidade é ${numv}. Multado ;)<br>Dirija com cuidado <strong>IMPRUDENTE</strong>`
+                }else {
+                    res.innerHTML = `Sua velocidade é ${numv}. Dirija com cuidado.`
+                }        
+        }
+    </script>
+</body>
+</html>
