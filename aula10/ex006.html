@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: rgb(54, 54, 54);
+        }
+        div#msg {
+            font: 15pt Arial normal;
+            box-shadow: 0px 0px 10px  rgb(0, 0, 0);
+            background-color: green;
+            line-height: 200px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="msg">Vocễ é Klaus, click.</div>
+    <script>
+        const muda = document.getElementById('msg')
+        muda.addEventListener('click', clicar)
+        muda.addEventListener('mousemove', over)
+        muda.addEventListener('mouseout', out)
+        function clicar() {
+            muda.style.background = 'blue'
+            muda.innerHTML = 'Venha Para o AMOR!!!'
+        }
+        function over(){
+            muda.style.background = 'yellow'
+        }
+        function out() {
+            muda.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
