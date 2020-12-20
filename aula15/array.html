@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = [5,2,9,8]
+        num[4] = 7
+        num.push(4)
+        num.sort()
+        document.write(`noso vetor é o ${num}<br>`)
+        document.write(`O vetor tem ${num.length} posições<br>`)
+        //for (var c = 0;c < num.length; c++){
+        //    document.write(`O ${c + 1}º elemento é: ${num[c]}<br><br>`)
+        //}
+        for (var c in num){
+            document.write(`O ${Number(c) + 1}º elemento é: ${num[c]}<br><br>`)
+        }
+    </script>
+</body>
+</html>
