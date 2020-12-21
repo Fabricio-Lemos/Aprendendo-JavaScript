@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" name="numero" id="txtn"><input type="button" value="Verificar" id="ver">
+    </div>
+    <div id="resp">
+        Digite um numero
+    </div>
+    <script>
+        function parimp(){
+            var resp = document.querySelector('div#resp')
+            var resposta = document.createElement('h1')
+            var num = Number(document.getElementById('txtn').value)
+            resp.innerHTML = ''
+            if(num % 2 == 0){
+                resposta.innerHTML = `O valor digitado é: Par!`
+                resp.appendChild(resposta)
+            }else {
+                resposta.innerHTML = `O valor digitado é: Impar!`
+                resp.appendChild(resposta)
+            }
+        }
+        var ver = document.getElementById('ver')
+        ver.addEventListener('click', function(){parimp()})
+    </script>
+</body>
+</html>
