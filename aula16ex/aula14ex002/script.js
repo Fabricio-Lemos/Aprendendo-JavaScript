@@ -1,9 +1,11 @@
 var numeros = []
 function interacao(vint){
-    var num = Number(document.getElementById('txtn').value)
+    var nume = document.getElementById('txtn')
     var resposta = document.createElement('p')
     var resp = document.getElementById('res')
-    if(num < 1 || num > 100 || num == null){
+    var num = nume.value
+    resposta.innerHTML = ''
+    if(num < 1 || num > 100){
         alert('Número inválido. Preencha os campos corretamente')
     }else{
         if(vint == 0){
@@ -13,6 +15,8 @@ function interacao(vint){
                 op.innerHTML = `Valor ${num} adicionado`
                 tab.appendChild(op)
                 numeros.push(num)
+                nume.value = ''
+                nume.focus()
             }else{
                 alert('Número já está na lista.')
             }
@@ -31,10 +35,8 @@ function interacao(vint){
             for(var c in numeros){
                 s += numeros[c]
             }
-            resposta.setAttribute('id', 'paragrafo')
             resposta.innerHTML = `O vetor tem ${numeros.length} valores. <br>O menor valor é ${min}. <br>O maior valor é ${max}. <br>Somando tudo é ${s}. <br>A média dos valores é ${s/numeros.length}.`
-            resp.appendChild(resposta)
         }
     }
-
+    resp.appendChild(resposta)
 }
